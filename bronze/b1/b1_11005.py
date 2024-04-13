@@ -3,8 +3,8 @@ digit = []
 num = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 while n > 0:
-    quotient = n % b
+    remainder = n % b
     n //= b
-    digit.append(num[quotient])
+    digit.append(num[remainder])
 
 print(''.join(reversed(digit)))
