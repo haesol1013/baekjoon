@@ -1,3 +1,7 @@
+"""
+소수
+"""
+
 start = int(input())
 end = int(input())
 
