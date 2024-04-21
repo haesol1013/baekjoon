@@ -1,21 +1,25 @@
-def find_fraction(x):
-    diagonal_num = 1
-    diagonal_sum = 0
-    while diagonal_sum + diagonal_num < x:
-        diagonal_sum += diagonal_num
-        diagonal_num += 1
+"""""""""
+# 분수 찾기
+"""""""""
 
-    if diagonal_num % 2 == 0:
-        numerator = x - diagonal_sum
-        denominator = diagonal_num - (x - diagonal_sum) + 1
+
+def find_frac(n: int) -> str:
+    line = 0
+    card = 0
+    while card < n:
+        line += 1
+        card += line
+
+    pre_card = card - line
+    if line % 2 == 0:
+        x = n - pre_card
+        y = card - n + 1
     else:
-        numerator = diagonal_num - (x - diagonal_sum) + 1
-        denominator = x - diagonal_sum
+        x = card - n + 1
+        y = n - pre_card
 
-    return f"{numerator}/{denominator}"
+    return str(x) + '/' + str(y)
 
-# 입력 받기
-x = int(input())
 
-# 결과 출력
-print(find_fraction(x))
+n = int(input())
+print(find_frac(n))
