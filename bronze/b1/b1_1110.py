@@ -12,7 +12,7 @@ while True:
         str_n = '0' + str_n
 
     result = int(str_n[0]) + int(str_n[-1])
-    new_n = int(str_n[1] + str(result)[-1])
+    new_n = int(str_n[-1] + str(result)[-1])
 
     if n == new_n:
         break
