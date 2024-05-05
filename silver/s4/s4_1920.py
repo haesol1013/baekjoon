@@ -1,6 +1,4 @@
-"""""""""
-# 수 찾기
-"""""""""
+# 수 찾기 - 1920
 
 _ = int(input())
 n = list(map(int, input().split()))

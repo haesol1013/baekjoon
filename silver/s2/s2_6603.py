@@ -1,6 +1,4 @@
-"""""""""
-# 로또 
-"""""""""
+# 로또 - 6603
 
 from itertools import combinations
 

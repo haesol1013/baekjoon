@@ -1,6 +1,5 @@
-"""""""""
-# 좌표 정렬하기 2
-"""""""""
+# 좌표 정렬하기 2 - 11651
+
 
 n = int(input())
 pos = [tuple(map(int, input().split())) for _ in range(n)]

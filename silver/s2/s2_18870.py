@@ -1,6 +1,4 @@
-"""""""""
-# 좌표 압축
-"""""""""
+# 좌표 압축 - 18870
 
 n = int(input())
 pos_list = list(map(int, input().split()))

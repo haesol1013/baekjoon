@@ -1,6 +1,5 @@
-"""""""""
-# 카드 2
-"""""""""
+# 카드 2 - 2164
+
 from collections import deque
 
 n = int(input())
