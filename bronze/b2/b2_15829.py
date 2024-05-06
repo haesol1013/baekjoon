@@ -1,6 +1,4 @@
-"""""""""
-#Hashing
-"""""""""
+# Hashing - 15829
 
 length = int(input())
 sequence = input()

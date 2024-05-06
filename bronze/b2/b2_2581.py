@@ -1,6 +1,4 @@
-"""
-소수
-"""
+# 소수 - 2581
 
 start = int(input())
 end = int(input())
