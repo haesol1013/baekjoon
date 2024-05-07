@@ -2,14 +2,10 @@
 
 import sys
 
-_ = int(input())
-card_list = list(map(int, sys.stdin.readline().split()))
-m = int(input())
-check_list = list(map(int, sys.stdin.readline().split()))
-result = [0] * m
+_ = sys.stdin.readline()
+std_card = set(map(int, sys.stdin.readline().split()))
+_ = sys.stdin.readline()
+check_card = list(map(int, sys.stdin.readline().split()))
 
-for index, x in enumerate(check_list):
-    if x in card_list:
-        result[index] = 1
-
-print(*result)
+for card in check_card:
+    print(1, end=" ") if card in std_card else print(0, end=" ")
