@@ -1,0 +1,5 @@
+# 별 찍기 - 6 - 2443
+
+n = int(input())
+for i in range(n):
+    print(" "*i + "*"*(2*(n-i) - 1))
