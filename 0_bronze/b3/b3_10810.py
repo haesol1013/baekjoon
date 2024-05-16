@@ -2,10 +2,9 @@
 
 import sys
 
-n, k = map(int, sys.stdin.readline().split())
+n, m = map(int, sys.stdin.readline().split())
 box = [0]*n
-for _ in range(4):
+for _ in range(m):
     i, j, k = map(int, sys.stdin.readline().split())
-    for x in range(i-1, j):
-        box[x] = k
+    box[i-1:j] = [k]*(j-i+1)
 print(*box)
