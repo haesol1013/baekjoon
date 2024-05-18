@@ -12,5 +12,3 @@ def checker(n, d):
 for i in range(2992, 10000):
     if checker(i, 10) == checker(i, 12) == checker(i, 16):
         print(i)
-
-
