@@ -1,7 +1,7 @@
 # 수 찾기 - 1920
 
 _ = int(input())
-n = list(map(int, input().split()))
+n = set(map(int, input().split()))
 
 _ = int(input())
 target = list(map(int, input().split()))
