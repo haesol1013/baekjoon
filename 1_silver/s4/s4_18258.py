@@ -19,4 +19,3 @@ for _ in range(n):
             print(arr[0]) if arr else print(-1)
         case "back":
             print(arr[-1]) if arr else print(-1)
-            
