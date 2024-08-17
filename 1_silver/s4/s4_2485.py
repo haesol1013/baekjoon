@@ -9,7 +9,7 @@ def get_gcd(a: int, b: int) -> int:
 def multiple_gcd(arr: list[int]) -> int:
     gcd: int = get_gcd(arr[0], arr[1])
     for i in range(2, len(arr)):
-        gcd = get_gcd(gcd, arr[2])
+        gcd = get_gcd(gcd, arr[i])
     return gcd
 
 
