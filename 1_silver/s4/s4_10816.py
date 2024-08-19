@@ -1,7 +1,6 @@
 # 숫자 카드 2 - 10816
 
 import sys
-import numpy as np
 
 _ = sys.stdin.readline()
 std_list = list(map(int, sys.stdin.readline().split()))
