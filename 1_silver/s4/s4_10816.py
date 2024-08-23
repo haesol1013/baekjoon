@@ -1,21 +1,27 @@
 # 숫자 카드 2 - 10816
 
 import sys
+input = lambda: sys.stdin.readline().rstrip()
 
-_ = sys.stdin.readline()
-std_list = list(map(int, sys.stdin.readline().split()))
-std_set = set(std_list)
-_ = sys.stdin.readline()
-check_card = list(map(int, sys.stdin.readline().split()))
 
-for card in check_card:
-    if card in std_set:
-        cnt = std_list.count(card)
-        print(cnt, end=" ")
+def main():
+    _ = input()
+    existed_card = map(int, input().split())
+    _ = input()
+    targets = map(int, input().split())
 
-        std_set.remove(card)
-        for _ in range(cnt):
-            std_list.remove(card)
+    dict_ = dict()
+    for card in existed_card:
+        try:
+            dict_[card] += 1
+        except KeyError:
+            dict_[card] = 1
 
-    else:
-        print(0, end=" ")
+    for target in targets:
+        try:
+            print(dict_[target], end=" ")
+        except KeyError:
+            print(0, end=" ")
+
+
+main()
