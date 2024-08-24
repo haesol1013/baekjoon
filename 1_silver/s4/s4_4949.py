@@ -8,15 +8,13 @@ def is_balanced(sentence: str) -> str:
     stack = []
     for char in sentence:
         match char:
-            case "(":
+            case "(" | "[":
                 stack.append(char)
             case ")":
                 if stack and stack[-1] == "(":
                     stack.pop()
                 else:
                     stack.append(char)
-            case "[":
-                stack.append(char)
             case "]":
                 if stack and stack[-1] == "[":
                     stack.pop()
