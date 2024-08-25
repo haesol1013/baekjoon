@@ -4,7 +4,7 @@ from collections import deque
 
 
 def main():
-    n = int(input())
+    _ = int(input())
     balloon = deque(enumerate(map(int, input().split())))
     log = []
 
