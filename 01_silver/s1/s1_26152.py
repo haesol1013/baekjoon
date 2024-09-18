@@ -1,24 +1,38 @@
 # 플래피 버드 스코어링 - 26152
 
 import sys
-input = sys.stdin.readline
+input = lambda: sys.stdin.readline().rstrip()
 
-_ = int(input())
-top = tuple(map(int, input().split()))
-bottom = tuple(map(int, input().split()))
-_ = int(input())
-bird_sizes = tuple(map(int, input().split()))
-terms = [x[0] - x[1] for x in zip(top, bottom)]
 
-scores = []
-for bird_size in bird_sizes:
-    score = 0
-    for term in terms:
-        if bird_size > term:
-            break
+def binary_search(arr: list[int], bird: int, length: int) -> int:
+    if arr[0] < bird:
+        return 0
+
+    start, end = 1, length - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] < bird:
+            end = mid - 1
         else:
-            score += 1
-    scores.append(score)
+            start = mid + 1
+    return start
 
-for score in scores:
-    print(score)
+
+def main():
+    n = int(input())
+    top = tuple(map(int, input().split()))
+    bottom = tuple(map(int, input().split()))
+    _ = int(input())
+    bird_sizes = tuple(map(int, input().split()))
+
+    limits = [0] * n
+    min_val = 10**19
+    for i in range(n):
+        min_val = min(top[i] - bottom[i], min_val)
+        limits[i] = min_val
+
+    for bird in bird_sizes:
+        print(binary_search(limits, bird, n))
+
+
+main()
