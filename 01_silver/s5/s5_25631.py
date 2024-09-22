@@ -1,3 +1,5 @@
+# 마트료시카 합치기 - 25631
+
 n = int(input())
 dolls = sorted(map(int, input().split()))
 
