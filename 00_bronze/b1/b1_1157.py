@@ -1,13 +1,10 @@
-word = input().upper()
-word_list = list(set(word))
-word_cnt = []
+# 단어 공부 - 1157
 
-for i in word_list:
-    count = word.count(i)
-    word_cnt.append(count)
-
-if word_cnt.count(max(word_cnt)) > 1:
-    print('?')
+s = input().upper()
+set_s = list(set(s))
+nums = [s.count(i) for i in set_s]
+max_ = max(nums)
+if nums.count(max_) == 1:
+    print(set_s[nums.index(max_)])
 else:
-    max_index = word_cnt.index(max(word_cnt))
-    print(word_list[max_index])
+    print("?")
